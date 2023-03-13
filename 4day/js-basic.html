@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최범준 - 자바스크립트 기초</title>
+
+    <script>
+        // 한줄주석, 자바스크립트는 동작을 주는 언어
+        /* 여러줄 주석 */
+        /* var (변수) : 변하는 값을 저장하는 공간, 1번에 1개의 데이터 저장가능
+                        변수의 맨앞은 영문, 언더바(_), ($)만 저장가능
+                        변수명 : 영문, _, $, 숫자만 포함 가능, 대소문자 구분. */
+        
+        //===========================================================
+        // 증감연산자 : 하나씩 증가, (++) : 하나의 작업에 1씩 증가, (--) 1씩 감소.
+        
+        var x = 27;
+        
+        document.write(x++); //document : body안에 내용 넣는 명령어
+        document.write("<br/>");
+        document.write(x++)
+        document.write("<br/>");
+        document.write(x++)
+        document.write("<br/>");
+        document.write(x++)
+        document.write("<br/>");
+        document.write("<br/>");
+        document.write("<br/>");
+
+        document.write(x--)
+        document.write("<br/>");
+        document.write(x--)
+        document.write("<br/>");
+        document.write(x--)
+        document.write("<br/>");
+        document.write(x--)
+        document.write("<br/>");
+        
+         //========================================================
+        
+        // 산술연산자 : +, -, *, /, %(나머지)의 사칙연산
+        // 문자형데이터 (string) : ""안에 데이터 입력
+        // 숫자형데이터 (number) : 숫자로 정의되는 데이터는 그냥 씀
+        // 논리형데이터 (boolean) : 참(1) 거짓(0)에 따라 정의되는 데이터
+        // null 데이터          :  비어있음을 표시하는 데이터
+        // 맨 앞의 내용이 문자열일 경우, 뒤에 나오는 숫자는 문자열로 인식된다.
+        // 맨 앞의 내용이 숫자일 경우 연산이 된다.
+
+        //맨 앞이 문자열 일 때
+        var time1 = "현재 시간은";
+        var time2 = 1;
+        var time3 = 2;
+        var time4 = "시 입니다.";
+        var time5 = time1+time2+time3+time4;
+
+        document.write(time5);
+        document.write("<br/>");
+       
+        //맨 앞이 숫자 일 때
+        var time2 = 1;
+        var time3 = 2;
+        var time4 = "시 입니다.";
+        var time5 = time2+time3+time4;
+
+        document.write(time5);
+        document.write("<br/>");
+
+        //=======================================================
+        //사칙연산
+
+        document.write("beomjun");
+        document.write("<br/>");
+        document.write(1+1);
+        document.write("<br/>");
+        document.write(8-4);
+        document.write("<br/>");
+        document.write(6*7);
+        document.write("<br/>");
+        document.write(12*16);
+        document.write("<br/>");
+        document.write(10%3);
+        document.write("<br/>");
+        document.write("<br/>");
+        document.write("<br/>");
+        //========================================================
+        
+        var A = 10;
+        var B = 3;
+        var result;
+        
+        result = A + B;
+        document.write(result+"<br/>");
+        result = A - B;
+        document.write(result+"<br/>");
+        result = A * B;
+        document.write(result+"<br/>");
+        result = A / B;
+        document.write(result+"<br/>");
+        result = A % B;
+        document.write(result+"<br/>");
+        document.write("<br/>");
+        document.write("<br/>");
+
+        //==============================================================================
+        var str1 = "오늘 "
+        var str2 = "비온다. "
+        var str3 = "우산 없는데.."
+        var sum = str1 + str2 + str3;
+        document.write(sum + "<br/>");
+        document.write("<br/>");
+        document.write("<br/>");    
+
+        //=========================================================
+        // 대입할당연산자 : 연산된 데이터를 지정된 변수에 대입
+        //                 +=, -=, *=, /=, %=
+
+        var num1 = 10;
+        var num2 = 20;
+        
+        num1 += 5;
+        document.write(num1+"<br/>");
+        num1 -= 5;
+        document.write(num1+"<br/>");
+        num1 *= 5;
+        document.write(num1+"<br/>");
+        num1 /= 5;
+        document.write(num1+"<br/>");
+        num2 %= 3;
+        document.write(num2+"<br/>");
+        document.write("<br/>");
+        document.write("<br/>");    
+        
+        //=================================================================================
+        // 비교 연산자 : 두개의 데이터를 비교할 때 사용 잘못되면 거짓(0), 참이면(1)
+        // == : 같다 / !== : 다르다 / > : 크다 / < : 작다 
+
+        var C = 10;
+        var D = 20;
+        document.write((C>D) + "<br/>");
+        document.write((C<D) + "<br/>");
+        document.write((C==D) + "<br/>");
+        document.write((C!==D) + "<br/>");
+        document.write("<br/>");
+        document.write("<br/>");    
+
+        //=================================================================================
+        //반복문(for문) : 반복적으로 수행 , for(초기값; 조건식; 증감식;)
+        
+        for (var i = 0; i<=10; i++)
+        {
+            document.write(i+"<br/>");
+        }
+        document.write("<br/>");
+        document.write("<br/>");  
+
+        //===================================================================================
+        //조건문(if, if~else문) : 해당 조건을 만족할 때만 실행됨
+    
+        var E = 10;
+        var F = 40;
+        var G = 30;
+
+        if(E>F)
+        {
+            document.write("E가 F보다 크다."+ "<br/>");
+        } 
+        else if(F>G)
+        {
+            document.write("F가 G보다 크다."+ "<br/>");
+        }
+        else
+        {
+            document.write("ㅇㅉㄹㄱ"+ "<br/>");
+        }
+        document.write("<br/>");
+        document.write("<br/>");
+        
+        //====================================================================================
+        //배열(Array) : 하나의 변수에 여러개의 데이터 저장 가능.
+        //자바스크립트는, 배열이나 기타등등 순번이 있는 것에서 첫번째 요소가 무조건 0.
+
+        var fruits = ["사과", "배", "바나나"]
+                     //0        1      2
+            document.write(fruits[0]+"<br/>");
+            document.write(fruits[1]+"<br/>");
+            document.write(fruits[2]+"<br/>");
+            document.write("<br/>");
+            document.write("<br/>");
+
+        //======================================================================================
+        //함수 : 실행문을 저장했다가 필요할 때 꺼내 쓰는 것
+
+        var i = 4;
+        function myFnC()
+        {
+            i++;
+            document.write("beomjun"+i+"<br/>");
+        }
+        myFnC()
+        myFnC()
+        myFnC()
+
+        //======================================================================================
+    
+    </script>
+
+</head>
+<body>
+    <!-- 이미지와 내용이 들어감 (body) -->
+</body>
+</html>

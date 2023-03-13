@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin,padding</title>
+
+    <style>
+        * {margin : 0; padding: 0;}
+        /* !important; 우선순위 선점시키기 */
+        /* justify-content : space-beteen()양끝단 마진0 맞추고 아이템 마진 auto scale */
+        /* justify-content : space-evenly() 마진 모두 같음 */
+        /* justify-content : space-around() 양끝마진 10 내부마진 10+10=20 */
+        .me{display: flex; justify-content: space-evenly; border: 1px solid red; 
+            width: 500px; height: 100px; background-color: #fff;}
+
+        div {width: 100px; height: 100px; background-color: pink; color: blue; 
+            line-height: 100px; text-align: center; border: 1px solid red;}
+
+            div:nth-child(1) {order: 4;}
+            div:nth-child(2) {order: 2;}
+            div:nth-child(3) {order: 3;}
+            div:nth-child(4) {order: 1;}
+    </style>
+</head>
+<body>
+    <!-- div*3 -->
+    <div class="me">
+        <div class="a">
+            최범준
+        </div>
+        <div class="b">
+            장원종
+        </div>
+        <div class="c">
+            전광현
+        </div>
+        <div class="d">
+            손석원
+        </div>
+    
+    </div>
+</body>
+</html>
